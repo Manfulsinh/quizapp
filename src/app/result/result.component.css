@@ -1,0 +1,52 @@
+.result-container {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    text-align: center;
+    background-color: #f7f7f7;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+  }
+  
+  h2 {
+    color: #333;
+  }
+  
+  .score-box {
+    margin-top: 20px;
+    margin-bottom: 30px;
+  }
+  
+  .score-text {
+    font-size: 1.5rem;
+    color: #555;
+  }
+  
+  .score-value {
+    font-size: 2rem;
+    font-weight: bold;
+    display: block;
+    margin-top: 10px;
+    color: #3498db;
+  }
+  
+  .feedback {
+    font-size: 1.1rem;
+    color: #666;
+  }
+  
+  .retry-button {
+    padding: 10px 25px;
+    font-size: 1rem;
+    background-color: #3498db;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .retry-button:hover {
+    background-color: #2980b9;
+  }
+  

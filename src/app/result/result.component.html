@@ -1,0 +1,19 @@
+<div class="result-container">
+    <h2>Quiz Results</h2>
+    <div class="score-box">
+      <span class="score-text">Your Score:</span>
+      <span class="score-value">{{ score }} / {{ totalQuestions }}</span>
+    </div>
+    
+    <div class="feedback">
+      <ng-container *ngIf="score/totalQuestions > 0.75; else averageScore">
+        <p>Excellent job! You have a great grasp on this topic.</p>
+      </ng-container>
+      <ng-template #averageScore>
+        <p>Good effort! Consider reviewing and trying again for a better score.</p>
+      </ng-template>
+    </div>
+    
+    <button (click)="restartQuiz()" class="retry-button">Retry Quiz</button>
+  </div>
+  
