@@ -11,7 +11,7 @@
     <app-result></app-result>
   </div>
    -->
-   <div class="quiz-container" *ngIf="currentQuestion">
+   <!-- <div class="quiz-container" *ngIf="currentQuestion">
     <h2 class="question-text my-4" [ngClass]="{'marked-for-review': currentQuestion.markedForReview}">
       {{ currentQuestion.text }}
   </h2>
@@ -37,4 +37,36 @@
  <div *ngIf="!currentQuestion">
     <app-result></app-result>
  </div>
+  -->
+
+
+
+
+
+
+
+  <div class="quiz-container container" *ngIf="currentQuestion">
+    <h2 class="question-text my-4" [ngClass]="{'marked-for-review': currentQuestion.markedForReview}">
+      {{ currentQuestion.text }}
+    </h2>
+    
+    <ul class="list-group choices-list mb-4">
+        <li *ngFor="let choice of currentQuestion.choices; let idx = index" class="list-group-item">
+            <div class="form-check">
+                <input class="form-check-input" type="radio" name="choice" id="choice{{ idx }}" (change)="selectAnswer(idx)">
+                <label class="form-check-label" for="choice{{ idx }}">
+                    {{ choice }}
+                </label>
+            </div>
+        </li>
+    </ul>
+    
+    <div class="buttons-container mt-4 d-flex justify-content-between">
+        <button class="btn btn-secondary action-button" (click)="reviewQuestion()">Review</button>
+        <button [disabled]="selectedAnswerIndex === null" class="btn btn-primary action-button" (click)="nextQuestion()">Next</button>
+    </div>
+</div>
  
+<div *ngIf="!currentQuestion" class="container">
+    <app-result></app-result>
+</div>

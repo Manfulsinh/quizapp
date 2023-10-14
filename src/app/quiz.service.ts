@@ -26,6 +26,20 @@ export class QuizService {
       answer: "Lion",
       markedForReview: false
     },
+
+
+    {
+      text: "Which is the largest planet in our solar system?",
+      choices: ["Mars", "Earth", "Jupiter", "Venus"],
+      answer: "Jupiter",
+      markedForReview: false
+    },
+    {
+      text: "Which animal is known as the king of the jungle?",
+      choices: ["Lion", "Elephant", "Cheetah", "Giraffe"],
+      answer: "Lion",
+      markedForReview: false
+    },
    
    
   ];
